@@ -142,6 +142,12 @@ git diff --cached
 
 Do not paste suspected credentials into public issues. If a secret is exposed, revoke or rotate it immediately: deleting the current file does not remove it from Git history.
 
+## License
+
+[MIT](LICENSE) © 2026 tonyputi. You can use, modify, and redistribute this template, including commercially, while retaining the license and copyright notice. The software is provided without warranty.
+
+The included extensions are separate projects and retain their own licenses.
+
 ## Upstream projects
 
 - [Pi Coding Agent and documentation](https://pi.dev)

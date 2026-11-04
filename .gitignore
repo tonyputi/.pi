@@ -1,0 +1,6 @@
+# Public template: only explicitly reviewed files belong in Git.
+*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/settings.json

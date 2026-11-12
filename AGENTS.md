@@ -4,12 +4,19 @@
 
 - Respond in the user's language. Write generated code, comments, documentation, commit messages, issues, PRs, and other artifacts in English unless the task explicitly requires another language.
 - Keep answers concise. Ask one question at a time when clarification is needed.
+- Aim for "80% of the way to ASD-STE100": use clear, direct language, short sentences, concrete verbs, and consistent terminology. Keep explanations natural in the user's language; do not enforce the standard's restricted vocabulary or claim formal compliance.
+- Use a small diagram when it explains relationships or flows more clearly than prose. Create interactive HTML or explainer videos only when useful and proportionate to the request; do not generate extra artifacts by default.
 
 ## Implementation
 
-- Read applicable project instructions and relevant existing code before editing. Reuse established conventions and installed tools; prefer the smallest complete change.
-- Keep changes scoped to the task. Update affected callers, tests, and existing documentation together. Create new documents only when necessary; document the current behavior rather than delivery history.
-- Run relevant existing checks. State what was not checked and any remaining risk; never claim unperformed verification.
+- Read applicable project instructions and relevant existing code before editing. State material assumptions and surface uncertainty; ask before proceeding when different interpretations would change the outcome. Explain relevant tradeoffs and push back when a simpler or safer approach better serves the goal.
+- Reuse established conventions and installed tools; prefer the smallest complete change. Do not add speculative features, abstractions, configuration, or flexibility.
+- Keep changes surgical: match existing style and leave unrelated code, comments, and formatting alone. Remove imports, variables, and functions made unused by your change; report unrelated dead code rather than deleting it.
+- Update affected callers, tests, and existing documentation together. Create new documents only when necessary; document the current behavior rather than delivery history.
+- For non-trivial work, define verifiable success criteria before implementation. For multi-step tasks, state a brief plan with a concrete check for each step; keep the process proportionate for trivial edits.
+- For bug fixes, when feasible, first write a regression test and confirm it fails for the expected reason, then make it pass. Establish a correct solution before optimizing, and preserve correctness with checks. For refactors, run relevant tests before and after.
+- For web changes, use a browser when available to check the affected user-visible behavior alongside relevant tests; do not install new browser tooling without agreement.
+- Run relevant existing checks and iterate until the success criteria are met or a blocker requires clarification. State what was not checked and any remaining risk; never claim unperformed verification. Keep the diff and verification evidence easy for a human to review; agent autonomy is not proof of correctness.
 
 ## Git workflow
 

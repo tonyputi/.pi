@@ -92,7 +92,7 @@ The shared instructions guide the agent to work in an isolated worktree, use a b
 
 ## Working rules
 
-The full instructions live in [`AGENTS.md`](AGENTS.md). In brief:
+[`AGENTS.md`](AGENTS.md) contains the complete, self-contained agent instructions. Agents do not need to read this README to follow them. The table below is a summary for users:
 
 | Area | Default |
 | --- | --- |
@@ -110,8 +110,6 @@ The full instructions live in [`AGENTS.md`](AGENTS.md). In brief:
 | External changes | No unrelated publication, infrastructure operation, deployment, or data deletion without approval. |
 
 GitHub automatically closes linked issues when a resolving PR merges into the repository's **default branch**. A different target branch requires an explicit closure plan. See [GitHub's closing-keyword rules](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue).
-
-The coding guidance draws on [Karpathy's observations on coding agents](https://x.com/karpathy/status/2015883857489522876) and [his suggestions for clearer explanations](https://x.com/karpathy/status/2105819303471976479). The four-principle formulation (think before coding, simplicity first, surgical changes, goal-driven execution) is [Forrest Chang's synthesis](https://github.com/multica-ai/andrej-karpathy-skills), not a document authored by Karpathy. No additional skill or package is required.
 
 These are agent instructions, **not enforced branch protection, CI checks, or background automation**. Post-merge verification happens when the agent next checks the merged PR; this template does not run a watcher.
 

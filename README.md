@@ -96,6 +96,7 @@ The shared instructions guide the agent to work in an isolated worktree, use a b
 
 | Area | Default |
 | --- | --- |
+| Project conventions | Follow project-specific workflow conventions over shared defaults; preserve stricter safety and approval requirements, and clarify permission, security, or data-safety conflicts. |
 | Language | Reply in the user's language; write code, documentation, issues, commits, and PRs in English, except explicitly requested localization. |
 | Clarity | Aim for "80% of the way to ASD-STE100," not formal compliance; use diagrams or richer formats only when they help. |
 | Decisions | State material assumptions, clarify consequential ambiguity, explain tradeoffs, and push back when appropriate. |

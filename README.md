@@ -97,17 +97,21 @@ The full instructions live in [`AGENTS.md`](AGENTS.md). In brief:
 | Area | Default |
 | --- | --- |
 | Language | Reply in the user's language; write code, documentation, issues, commits, and PRs in English, except explicitly requested localization. |
-| Scope | Small, complete changes that reuse project conventions; no speculative abstractions. |
+| Clarity | Aim for "80% of the way to ASD-STE100," not formal compliance; use diagrams or richer formats only when they help. |
+| Decisions | State material assumptions, clarify consequential ambiguity, explain tradeoffs, and push back when appropriate. |
+| Scope | Small, complete changes that reuse project conventions; no speculative abstractions or unrelated cleanup. |
 | Issues | Required for non-trivial work, not for small, low-risk edits such as typos. |
 | Branches | `{feat\|fix\|hotfix\|docs\|chore}/{issue-number}/{short-title}`; omit the issue segment for trivial work without an issue. |
 | Isolation | Prefer Git worktrees inside the project's ignored `.worktrees/` directory. |
 | Delivery | Conventional Commits; a delivery request authorizes commits, branch push, and a PR—not a direct push to the default branch. |
 | Issue closure | Resolving PRs use `Closes`, not `Refs`; verify the issue is closed after merge. |
 | Review | A human reviews and merges, unless the user explicitly asks the agent to perform that merge. |
-| Checks and docs | Run relevant existing checks, update affected documentation, and disclose skipped checks or remaining risks. |
+| Checks and docs | Define verifiable goals, use regression tests for bugs when feasible, check web behavior in a browser when available, update affected documentation, and disclose skipped checks or remaining risks. |
 | External changes | No unrelated publication, infrastructure operation, deployment, or data deletion without approval. |
 
 GitHub automatically closes linked issues when a resolving PR merges into the repository's **default branch**. A different target branch requires an explicit closure plan. See [GitHub's closing-keyword rules](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue).
+
+The coding guidance draws on [Karpathy's observations on coding agents](https://x.com/karpathy/status/2015883857489522876) and [his suggestions for clearer explanations](https://x.com/karpathy/status/2105819303471976479). The four-principle formulation (think before coding, simplicity first, surgical changes, goal-driven execution) is [Forrest Chang's synthesis](https://github.com/multica-ai/andrej-karpathy-skills), not a document authored by Karpathy. No additional skill or package is required.
 
 These are agent instructions, **not enforced branch protection, CI checks, or background automation**. Post-merge verification happens when the agent next checks the merged PR; this template does not run a watcher.
 

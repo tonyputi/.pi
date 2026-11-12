@@ -11,7 +11,7 @@ A public GitHub template for [Pi Coding Agent](https://pi.dev): shared working r
 | File | Purpose |
 | --- | --- |
 | [`AGENTS.md`](AGENTS.md) | Shared instructions for communication, implementation, Git delivery, and safety. |
-| [`settings.json`](settings.json) | Two pinned Pi packages; no imposed AI provider or model. |
+| [`settings.json`](settings.json) | Two Pi packages following npm's `latest` tags; no imposed AI provider or model. |
 | [`.gitignore`](.gitignore) | An explicit allowlist that keeps runtime files out of Git by default. |
 
 ### Two extensions, no kitchen sink
@@ -125,7 +125,16 @@ There are no separate personal and work profiles. The baseline is shared; organi
 
 ## Updates and removal
 
-Package versions are pinned in `settings.json`. To upgrade, review the upstream release, update the relevant version, then merge that declaration into your live settings. Restart Pi or run `/reload` to reconcile the configuration. Updating this repository alone does not update previously copied files.
+The two package declarations use explicit `@latest` tags. New installations resolve npm's current `latest` release; installed packages are not exact-version pinned. Review upstream releases before updating: `latest` may introduce incompatible changes and is not reproducible across installations. To freeze a known-good release, replace `@latest` with an exact version.
+
+Merge the declarations into your live settings without replacing unrelated packages or preferences. To update only these two extensions, run:
+
+```bash
+pi update npm:pi-github-app-auth@latest
+pi update npm:@earendil-works/pi-voice@latest
+```
+
+Restart Pi or run `/reload` afterward to load the updated extensions. Do not rely on `/reload` alone to upgrade already installed packages. `pi update --extensions` updates all configured packages, including any others you have added. Updating this repository alone does not update previously copied files.
 
 To remove the setup, remove the two package declarations and the shared instructions from your live configuration, preserving unrelated settings. Restart Pi. Removing a package declaration does not revoke its GitHub App installation or erase credentials and downloaded models; manage those separately using the extensions' documentation.
 

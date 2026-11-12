@@ -1,5 +1,10 @@
 # Shared agent instructions
 
+## Scope and project conventions
+
+- Treat these instructions as shared defaults. Follow project-specific instructions for branch naming, issue requirements, worktree setup scripts, checks, and delivery procedures when they differ.
+- Preserve stricter project safety and approval requirements. If a conflict affects permissions, security, or data safety, stop and clarify rather than assuming authorization.
+
 ## Communication and artifacts
 
 - Respond in the user's language. Write generated code, comments, documentation, commit messages, issues, PRs, and other artifacts in English unless the task explicitly requires another language.

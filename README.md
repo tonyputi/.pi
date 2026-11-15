@@ -154,6 +154,10 @@ git diff --cached
 
 Do not paste suspected credentials into public issues. If a secret is exposed, revoke or rotate it immediately: deleting the current file does not remove it from Git history.
 
+## Repository automation
+
+PR CI validates `settings.json`. Dependabot updates can enable native squash auto-merge after CI; human CODEOWNER review and required checks remain mandatory. Before activation, require `Validate settings`, enable auto-merge and squash, and configure the repository-scoped GitHub App with Contents and Pull requests write, `GH_APP_ID` and `GH_APP_PRIVATE_KEY`, without ruleset bypass. See the [shared workflow prerequisites](https://github.com/tonyputi/.github#dependabot-auto-merge).
+
 ## License
 
 [MIT](LICENSE) © 2026 tonyputi. You can use, modify, and redistribute this template, including commercially, while retaining the license and copyright notice. The software is provided without warranty.

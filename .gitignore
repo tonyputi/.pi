@@ -5,3 +5,10 @@
 !/LICENSE
 !/AGENTS.md
 !/settings.json
+!/.github/
+/.github/*
+!/.github/dependabot.yml
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/ci.yml
+!/.github/workflows/auto-merge.yml

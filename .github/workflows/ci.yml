@@ -11,5 +11,5 @@ jobs:
     name: Validate settings
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: node -e "JSON.parse(require('fs').readFileSync('settings.json', 'utf8'))"
